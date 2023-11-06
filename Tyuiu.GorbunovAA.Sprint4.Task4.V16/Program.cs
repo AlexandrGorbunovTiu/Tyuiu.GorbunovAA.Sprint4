@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.GorbunovAA.Sprint4.Task3.V27.Lib;
+using Tyuiu.GorbunovAA.Sprint4.Task4.V16.Lib;
 
-namespace Tyuiu.GorbunovAA.Sprint4.Task3.V27
+namespace Tyuiu.GorbunovAA.Sprint4.Task4.V16
 {
     class Program
     {
@@ -16,24 +16,39 @@ namespace Tyuiu.GorbunovAA.Sprint4.Task3.V27
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
             Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
-            Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #27                                                             *");
+            Console.WriteLine("* Задание #4                                                              *");
+            Console.WriteLine("* Вариант #16                                                             *");
             Console.WriteLine("* Вынолнил: Горбунов Александр Александрович │ ИИПб-23-2                  *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Вычислить сумму всех нечетных значений в массиве                        *");
-            Console.WriteLine("* и вывести это значение                                                  *");
+            Console.WriteLine("* Заменить четные значения в массиве                                      *");
+            Console.WriteLine("* на цифру 1                                                              *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine(" Известный нам массив                                                     *");
+            Console.WriteLine(" 6, 5, 6, 7, 3,                                                           *");
+            Console.WriteLine(" 5, 4, 6, 7, 3,                                                           *");
+            Console.WriteLine(" 5, 5, 5, 6, 5,                                                           *");
+            Console.WriteLine(" 6, 5, 4, 4, 3,                                                           *");
+            Console.WriteLine(" 4, 5, 4, 5, 5,                                                           *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            int[,] array = new int[,] { { 4, 3, 5, 5, 3 }, { 6, 7, 4, 4, 3 }, { 3, 3, 7, 3, 6 }, { 3, 4, 3, 7, 7 }, { 3, 5, 6, 3, 6 } };
-            Console.WriteLine(" Сумма нечетных элементов в массиве - " + ds.Calculate(array));
+            int[,] res = new int[,] { { 6, 5, 6, 7, 3 }, { 5, 4, 6, 7, 3 }, { 5, 5, 5, 6, 5 }, { 6, 5, 4, 4, 3 }, { 4, 5, 4, 5, 5 } };
+            var array = ds.Calculate(res);
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+            for (int i = 0; i < rows; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write("{0}\t", array[i, j]);
+
+                }
+            }
             Console.ReadKey();
         }
     }
