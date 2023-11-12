@@ -16,7 +16,7 @@ namespace Tyuiu.GorbunovAA.Sprint4.Task3.V27.Lib
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (array[i, j] % 2 == 0)
+                    if(array[i, j] % 2 == 0)
                     {
                         s += 1;
                     }
