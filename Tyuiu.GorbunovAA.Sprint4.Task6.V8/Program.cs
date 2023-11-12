@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.GorbunovAA.Sprint4.Task3.V27.Lib;
+using Tyuiu.GorbunovAA.Sprint4.Task6.V8.Lib;
 
-namespace Tyuiu.GorbunovAA.Sprint4.Task3.V27
+namespace Tyuiu.GorbunovAA.Sprint4.Task6.V8
 {
     class Program
     {
@@ -15,24 +15,25 @@ namespace Tyuiu.GorbunovAA.Sprint4.Task3.V27
             Console.Title = "Спринт #4 │ Выполнил: Горбунов А.А. │ ИИПб-23-2";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Одномерные массивы (статический ввод)                             *");
-            Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #27                                                             *");
+            Console.WriteLine("* Тема: Двумерные массивы (случайная генерация)                           *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #8                                                              *");
             Console.WriteLine("* Вынолнил: Горбунов Александр Александрович │ ИИПб-23-2                  *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Вычислить сумму всех нечетных значений в массиве                        *");
-            Console.WriteLine("* и вывести это значение                                                  *");
+            Console.WriteLine("* Вывести слова длинной                                                   *");
+            Console.WriteLine("* больше 4                                                                *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine(" Известный нам массив                                                     *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("Пицца, Борщ, Пельмени, Омлет, Салат, Суп, Роллы");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            int[,] array = new int[,] { { 4, 3, 5, 5, 3 }, { 6, 7, 4, 4, 3 }, { 3, 3, 7, 3, 6 }, { 3, 4, 3, 7, 7 }, { 3, 5, 6, 3, 6 } };
+            Console.ReadKey();
+            string[] array = new string[] { "Пицца", "Борщ", "Пельмени", "Омлет", "Салат", "Суп", "Роллы" };
+            var res = ds.Calculate(array);
+            Console.WriteLine("[{0}]", string.Join(", ", res));
             Console.ReadKey();
         }
     }
